@@ -1,182 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Electrical Principles Revision</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    $(document).ready(function(){
-        $('.card').click(function(e){
-            e.preventDefault();
-            $(this).toggleClass('flipped');
-        })
-    })
-</script>
-
-<style>
-.card-container {
-    width: 300px;
-    height: 300px;
-    margin: 25px;
-    background-color: transparent; 
-    border-radius: 25px;
-    transition: transform 0.5s;
-}
-
-.card {
-    width: 300px;
-    height: 300px;
-    margin: 25px;
-    background-color: transparent; 
-    border-radius: 25px;
-    perspective: 1000px;
-    cursor: pointer;
-    transition: transform 2s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-
-.card-container:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-}
-
-.card.flipped {
-    -webkit-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 25px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 25px;
-    box-shadow: 6px 6px 3px 2px rgba(98, 98, 102, 0.4);
-    background-color: lightgoldenrodyellow;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-flexbox-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card-back {
-    background-color: lightseagreen;
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Electrical Principles Revision Aid</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-
 <body>
-    <script>
-        var defsarr = [];
-        var seldefs = [];
-        var prevseldefs = [];
-        function fetchData() {
-            //Puts data from txt file into array by line
-            fetch('stuff/EP defs.txt')
-                .then(response => response.text())
-                .then(text => text.split(/\r\n|\n/))
-                .then(function (result) {
-                    for (var i = 0; i < result.length; i++) {
-                        defsarr.push(result[i])
-                    }
-                });
-        }
-        fetchData();
-    </script>
-    <div class="py-3 jumbotron text-center" style="margin-bottom:0; background-image:url(stuff/typhoon_line.png); 
-                    background-size:50%; background-repeat:no-repeat; background-position:right center">
-        <img id="cosbadge" width="98" height="135" class="float-left" src="stuff\Cosbadge.png" alt="cosbadge">
-        <h1><br>Electrical Principles Revision Aid<br><br></h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            <p>Write down your response <b>before</b> clicking the card to check.<br>
-                Click 'Next' for a new set of definitions.</p>
-        </div>
-        <div class="row mt-2">
-            <button
-            id="next" 
-            class="btn btn-outline-primary" 
-            onclick="gendefs()">Next
-            </button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="column">
-            <div class="card-container">
-                <div id="c1" class="card">
-                    <div class="card-front" id="c1f"></div>
-                    <div class="card-back" id="c1b"></div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card-container">
-                <div id="c2" class="card">
-                    <div class="card-front" id="c2f"></div>
-                    <div class="card-back"id="c2b"></div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card-container">
-                <div id="c3" class="card">
-                    <div class="card-front"id="c3f"></div>
-                    <div class="card-back"id="c3b"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="column">
-            <div class="card-container">
-                <div id="c4" class="card">
-                    <div class="card-front" id="c4f"></div>
-                    <div class="card-back" id="c4b"></div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card-container">
-                <div id="c5" class="card">
-                    <div class="card-front" id="c5f"></div>
-                    <div class="card-back"id="c5b"></div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card-container">
-                <div id="c6" class="card">
-                    <div class="card-front"id="c6f"></div>
-                    <div class="card-back"id="c6b"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="container-fluid text-center">
+  <a class="skip-link" href="#card-grid">Skip to cards</a>
 
-        <a href="https://librecounter.org/referer/show" target="_blank">
-        <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" />
-        </a>
-    
-        <p>Designed to aid revision for the electrical principles element of the RAF Aerospace Eng Tech Course.</p>
-        <p>Designed and built by Mark Butler, APO, RAF Cosford</p>
-    </footer>
-    <script src="utils_flipcard_module.js"></script>
-    <script>gendefs();</script>
+  <header class="hero">
+    <img src="stuff/Cosbadge.png" width="98" height="135" alt="RAF Cosford badge">
+    <h1>Electrical Principles Revision Aid</h1>
+  </header>
+
+  <main class="main" id="main">
+    <p class="instructions">
+      Write down your response <strong>before</strong> flipping a card to check.
+      Use arrow keys to move between cards, Space or Enter to flip.
+      Choose <strong>Next</strong> (or press <kbd>N</kbd>) for a new set.
+    </p>
+
+    <div class="toolbar">
+      <button type="button" class="btn" id="btn-next">Next</button>
+      <p class="status" id="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+
+    <div class="card-grid" id="card-grid" role="list"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Designed to aid revision for the electrical principles element of the RAF Aerospace Eng Tech Course.</p>
+    <p>Designed and built by Mark Butler, APO, RAF Cosford</p>
+    <p><a href="accessibility.html">Accessibility statement</a></p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,135 @@
+State the symbol and SI units for charge
+\(V=\frac{I}{RE}\)
+State the symbol and SI units for current
+I - amperes (A)
+State the symbol and SI units for potential difference
+pd - volt (v)
+State the symbol and SI units for electromotive force
+EMF or E - volt (v)
+State the symbol and SI unit for resistance
+R - Ohm (&ohm;)
+State the symbol and SI units for resistivity
+&rho; - Ohm meter (&ohm;m)
+State the symbol and SI units for internal resistance
+r - Ohm (&ohm;)
+State the symbol and SI units for power
+P - Watts (W) 
+State the symbol and SI units for energy
+W - Joules (J)
+State the symbol and SI units for capacitance
+C - Farad (F)
+State the symbol and SI units for inductance
+L - Henry (H)
+Draw the symbol for a battery, indicating polarity
+<img src="stuff/bat.png" alt="Circuit symbol for a battery with positive and negative polarity marked">
+Draw the symbol for an ac supply
+<img src="stuff/acsup.png" alt="Circuit symbol for an alternating current supply">
+Draw the symbol for an earth connection
+<img src="stuff/earth.png" alt="Circuit symbol for an earth connection">
+Draw the symbol for a lamp
+<img src="stuff/lamp.png" alt="Circuit symbol for a lamp">
+Draw the symbol for a fuse
+<img src="stuff/fuse.png" alt="Circuit symbol for a fuse">
+Draw the symbol for a fixed resistor
+<img src="stuff/R.png" alt="Circuit symbol for a fixed resistor">
+Draw the symbol for a variable resistor
+<img src="stuff/Rvar.png" alt="Circuit symbol for a variable resistor">
+Draw the symbol for a preset resistor
+<img src="stuff/Rpre.png" alt="Circuit symbol for a preset resistor">
+Draw the symbol for a potentiometer
+<img src="stuff/pot.png" alt="Circuit symbol for a potentiometer">
+Draw the symbol for a rheostat
+<img src="stuff/rheo.png" alt="Circuit symbol for a rheostat">
+Draw the symbol for a fixed capacitor
+<img src="stuff/C.png" alt="Circuit symbol for a fixed capacitor">
+Draw the symbol for a variable capacitor
+<img src="stuff/Cvar.png" alt="Circuit symbol for a variable capacitor">
+Draw the symbol for a preset capacitor
+<img src="stuff/Cpre.png" alt="Circuit symbol for a preset capacitor">
+Draw the symbol for an electrolytic capacitor, indicating polarity
+<img src="stuff/Celect.png" alt="Circuit symbol for an electrolytic capacitor with polarity marked">
+Draw the symbol for an inductor
+<img src="stuff/L.png" alt="Circuit symbol for an inductor">
+Draw the symbol for a transformer
+<img src="stuff/tfmr.png" alt="Circuit symbol for a transformer">
+Draw the symbol for a relay
+<img src="stuff/relay.png" alt="Circuit symbol for a relay">
+Draw the symbol for an ammeter
+<img src="stuff/A.png" alt="Circuit symbol for an ammeter">
+Draw the symbol for a voltmeter
+<img src="stuff/V.png" alt="Circuit symbol for a voltmeter">
+Draw the symbol for a generator
+<img src="stuff/G.png" alt="Circuit symbol for a generator">
+Draw the symbol for a motor
+<img src="stuff/M.png" alt="Circuit symbol for a motor">
+Draw the symbol for a diode
+<img src="stuff/diode.png" alt="Circuit symbol for a diode showing anode and cathode direction">
+From the formula<br><b>Q = It</b><br>identify each symbol and state its SI units
+Q - charge   Coulombs (C)<br>I - current   Ampere (A)<br>t - time   seconds (s)
+From the formula<br><b>Q = CV</b><br>identify each symbol and state its SI units
+Q - charge   Coulombs (C)<br>C - capacitance   Farad (F)<br>V - potential difference   volt (v)
+From the formula<br><b>V = IR</b><br>identify each symbol and state its SI units
+V - potential difference   volt (v)<br>I - current   Ampere (A)<br>R - resistance   Ohm (&ohm;)
+State Ohm’s Law
+The current flowing through a conductor is proportional to the potential difference across its ends<br>V = I R
+State Kirchhoff’s Current Law
+The sum of the currents flowing into a junction equals the sum of the currents flowing away from the junction
+State Kirchhoff’s Voltage Law
+In any closed circuit, the algebraic sum of the applied voltages equals the algebraic sum of the voltage drops
+State the current and voltage relationships for resistors connected in series
+The same current flows in each series resistor. The pd across each series resistor is proportional to the value of the resistor
+State the current and voltage relationships for resistors connected in parallel
+The pd across each parallel resistor is the same. The current flowing through each parallel resistor is inversely proportional to the value of the resistor
+Define electrical energy
+1 joule of work is done when 1 coulomb of charge moves through a potential difference of 1 volt
+Define electrical power
+Electrical power is the rate at which an electrical system can perform work
+In the power supply shown, identify which diodes will conduct on the 1st (positive) half cycle of the input waveform
+<img src="stuff/bridge_rect.png" alt="Bridge rectifier circuit diagram with four diodes labelled D1 to D4"><nobr>Diodes D<sub>2</sub> & D<sub>4</sub></nobr>
+In the power supply shown, identify which diodes will conduct on the 2nd (negative) half cycle of the input waveform
+<img src="stuff/bridge_rect.png" alt="Bridge rectifier circuit diagram with four diodes labelled D1 to D4"><nobr>Diodes D<sub>1</sub> & D<sub>3</sub></nobr>
+State 3 uses for capacitors in aircraft
+(Any of)<br>- Fuel contents systems <br>- Navigation light flasher units <br>- High energy igniter units <br>- Electro-static microphones <br>- Photographic flash units
+State the parts of a basic capacitor
+Two metal plates separated by an insulator (dielectric)
+Define capacitance
+A capacitance of 1 Farad exists when a charging current of 1 ampere, flowing for 1 second, causes a change of 1 volt in the potential difference across the plates
+State the factors that affect the capacitance of a capacitor
+- The area of overlap of the plates<br>- the distance between the plates<br>- the type of insulator between the plates
+Define the safe working voltage for a capacitor
+The maximum dc voltage that can be applied to a capacitor without the dielectric breaking down
+Define flux in relation to magnetic fields and state the SI units
+The total flux emitted from the poles of a magnet. <br>Measured in Webers (Wb)
+Define flux density in relation to magnetic fields and state the SI units
+The flux per unit area. <br>Measured in Webers per square meter (Wb/m&sup2;)
+Define reluctance in relation to magnetism
+A measure of the opposition of a circuit or material to the establishment of magnetic flux
+State Faraday’s law of electromagnetic induction
+When a magnetic flux through a coil is made to vary, an emf is induced. The magnitude of this emf is proportional to the rate of change of flux
+State Lenz’s law of electromagnetic induction
+The induced voltage always acts in such a direction as to oppose the change of flux that produced it
+State the factors that affect the size of the induced emf when a conductor is moved through a magnetic field
+- Strength of the magnetic field<br>- Length of the conductor in the magnetic field<br>- Relative velocity<br>- Angle of the conductor through the magnetic flux
+State the parts of a basic transformer
+Primary and secondary windings and a ferromagnetic core
+What is a microswitch
+A mechanically operated switch with only a small movement required to make or break the contacts inside the switch
+What is a limit switch
+A microswitch housed inside a component to prevent mechanical movement outside preset limits
+What is an actuator
+A remotely controlled, electro-mechanical device that moves controls and valves in either a linear or rotary motion
+On a diagram of a sine wave show peak, peak to peak and a cycle
+<img src="stuff/sine.png" alt="Sine wave diagram labelled with peak, peak-to-peak and one cycle">
+Define the RMS (root mean square) value of an ac supply
+The dc value that would have the same heating effect as the ac supply
+Explain the difference between resistance and reactance
+Resistance is constant. Reactance varies with frequency
+With reference to a simple ac generator, define the following components: the rotor, the stator and the armature
+- Rotor: the rotating part of the machine. <br>- Stator: the stationary part of the machine. <br>- Armature: the part of the machine producing the output power
+State the 4 main electromagnetic losses in a simple machine and how each is reduced
+- Copper losses: good conductors with large cross sectional area <br>- Eddy currents: laminate the core <br>- Hysteresis losses: use low remenance material for core<br>- Flux Leakage: minimize rotor – stator air gap
+For an ac generator with the armature on the stator, explain two benefits of a wound field over a permanent magnet system
+Output voltage can be varied by changing the field current <br>Greater maximum flux density is possible with a wound field compared to a permanent magnet
+State the 3 main stages of a brushless three phase ac generator
+- Pilot exciter stage <br>- Main exciter stage <br>- Main output stage
+

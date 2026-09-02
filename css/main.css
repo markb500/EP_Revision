@@ -1,0 +1,282 @@
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.5rem 0.75rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 0.5rem;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+  .card-container:hover { transform: none; }
+  .card-container { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .card { border: 2px solid CanvasText; }
+  .card:focus-visible { outline: 3px solid Highlight; }
+  .card-face { box-shadow: none; border: 1px solid CanvasText; }
+  .btn { border: 2px solid ButtonText; }
+}
+
+/* Science Definitions Revision Aid */
+
+:root {
+  --bg: #f7f7f7;
+  --card-front: #fafad2; /* lightgoldenrodyellow */
+  --card-back: #0f6f69;  /* darker teal for WCAG AA with white text */
+  --shadow: rgba(98, 98, 102, 0.4);
+  --text: #222;
+  --muted: #555;
+  --accent: #0a58ca;
+  --footer-border: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* Header */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: #e9ecef;
+  background-image: url("../stuff/typhoon_line.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-bottom: 1px solid var(--footer-border);
+}
+
+.hero img {
+  width: 98px;
+  height: 135px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  flex: 1;
+  text-align: center;
+}
+
+/* Main layout */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.instructions {
+  margin: 0 0 1rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  appearance: none;
+  border: 2px solid var(--accent);
+  background: #fff;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--accent);
+  color: #fff;
+  outline: none;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.35);
+}
+
+.status {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.status strong {
+  color: var(--text);
+}
+
+.error {
+  color: #b00020;
+  font-weight: 600;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+@media (max-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    background-size: 70%;
+  }
+}
+
+.card-container {
+  width: min(300px, 100%);
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  border-radius: 25px;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+}
+
+.card-container:hover .card:not(:focus-visible) {
+  /* subtle scale on container so focus ring stays clear */
+}
+
+.card-container:hover {
+  transform: scale(1.03);
+  transition: transform 0.25s ease;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  padding: 1.25rem;
+  border-radius: 25px;
+  box-shadow: 6px 6px 3px 2px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: auto;
+}
+
+.card-front {
+  background: var(--card-front);
+}
+
+.card-back {
+  background: var(--card-back);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card-face .term {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-face .definition {
+  font-weight: 500;
+  font-size: 0.98rem;
+}
+
+.card-face .hint {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+/* Footer */
+.footer {
+  max-width: 1100px;
+  margin: 2rem auto 1rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--footer-border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0.35rem 0;
+}
+
+
+/* Answer images (circuit symbols, diagrams) */
+.card-face img {
+  max-width: 100%;
+  max-height: 180px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 0.35rem;
+}
+
+.card-face .definition {
+  max-width: 100%;
+}
